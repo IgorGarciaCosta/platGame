@@ -1,0 +1,1274 @@
+[gd_scene load_steps=44 format=1]
+
+[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
+[ext_resource path="res://scenes/personagemScenes/sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/tileSets/tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/Tiles/cloud1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Tiles/cloud3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Tiles/cloud2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Botoes/esquerda0.png" type="Texture" id=8]
+[ext_resource path="res://assets/Botoes/esquerda1.png" type="Texture" id=9]
+[ext_resource path="res://assets/Botoes/direita0.png" type="Texture" id=10]
+[ext_resource path="res://assets/Botoes/direita1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Botoes/cima0.png" type="Texture" id=12]
+[ext_resource path="res://assets/Botoes/cima1.png" type="Texture" id=13]
+[ext_resource path="res://assets/coin48.png" type="Texture" id=14]
+[ext_resource path="res://fonts/font100.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://assets/hud_heartFull.png" type="Texture" id=16]
+[ext_resource path="res://assets/backgrounds/back2.png" type="Texture" id=17]
+[ext_resource path="res://scenes/tileSets/tileWall.tres" type="TileSet" id=18]
+[ext_resource path="res://scenes/plataformasCyber.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/codObj.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/espinhoNeon.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/Tiles/convCodObj.png" type="Texture" id=22]
+[ext_resource path="res://scenes/assemblyFila.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/codObjFila.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/Tiles/cano.png" type="Texture" id=25]
+[ext_resource path="res://scenes/moeda.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/Tiles/placa.png" type="Texture" id=27]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.12012, 420 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 25.0807, 52.9674 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.3976, 0.325195 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 25.9061, 49.7577 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.7378, 0.623047 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.482208, 0.894531, 0.447266, 1 )
+dark_color = Color( 0.478431, 0.894118, 0.447059, 1 )
+border_size = 10
+border_blend = true
+draw_bg = false
+
+[sub_resource type="Curve2D" id=7]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 321.471, 642.943, -2.28992, 7.29199, 0, 0, 619.648, -135.111, 794.4, 547.737, 0, 0, 0, 0, 1437.34, 63.2001 )
+}
+
+[sub_resource type="Curve2D" id=8]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 175, -35, 0, 0, 0, 0, 1785, -35 )
+}
+
+[sub_resource type="Curve2D" id=9]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 105, -35, 0, 0, 0, 0, 105, -945 )
+}
+
+[sub_resource type="Curve2D" id=10]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 35, -35, 0, 0, 0, 0, 1645, -35 )
+}
+
+[sub_resource type="Curve2D" id=11]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 0.578003, -11.8407, 0, 0, 56.8021, -252.201, 448.178, -20.929, 0, 0, 31.8092, -197.671, 561.783, -98.1798, 0, 0, 0, 0, 632.217, -152.71 )
+}
+
+[sub_resource type="Curve2D" id=12]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 38.6254, -129.509, 7.39392, -14.1125, 0, 0, 99.9717, -179.495, 71.0123, 51.7778, 0, 0, 0, 0, 180.072, 122.212, 0, 0, 0, 0, 493.62, 122.212 )
+}
+
+[sub_resource type="Curve2D" id=13]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -0.200562, 4.38605, 0, 0, 0, 0, -5.77954, -419.62 )
+}
+
+[sub_resource type="Curve2D" id=14]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 5.91345, -6.26147, 0, 0, 0, 0, -2.45508, 487.483 )
+}
+
+[sub_resource type="Curve2D" id=15]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 5.86768, -5.44324, 0, 0, 258.046, -41.7427, 478.772, -14.7159, 0, 0, 0, 0, 750.77, -292.895, 0, 0, 0, 0, 751.045, -927.29 )
+}
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 319.628, 21.9307 )
+
+[node name="game" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="fim" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 6545, 1645 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 0
+
+[node name="shape" type="CollisionShape2D" parent="fim"]
+
+transform/pos = Vector2( 6545, 1645 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="spawn_point" type="Position2D" parent="."]
+
+transform/pos = Vector2( 105, 105 )
+
+[node name="spawn_time" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="dead_camera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 80000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="personagem" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 455, 385 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.76051, 4.8414 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 2
+collision/margin = 0.01
+script/script = ExtResource( 2 )
+
+[node name="sprite" parent="personagem" instance=ExtResource( 3 )]
+
+frame = 1
+
+[node name="shape" type="CollisionShape2D" parent="personagem"]
+
+transform/pos = Vector2( 1.76051, 4.8414 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="rayE" type="RayCast2D" parent="personagem"]
+
+transform/pos = Vector2( -20.7575, 56.8575 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+layer_mask = 2
+type_mask = 15
+
+[node name="rayD" type="RayCast2D" parent="personagem"]
+
+transform/pos = Vector2( 25.27, 56.8575 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+layer_mask = 1
+type_mask = 15
+
+[node name="camera" type="Camera2D" parent="personagem"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit/left = 0
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="pes" type="Area2D" parent="personagem"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 62.4263 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 1024
+collision/mask = 8192
+
+[node name="shape" type="CollisionShape2D" parent="personagem/pes"]
+
+transform/pos = Vector2( 0, 62.4263 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="corpo" type="Area2D" parent="personagem"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 1024
+collision/mask = 8192
+
+[node name="shape" type="CollisionShape2D" parent="personagem/corpo"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="cabeca" type="Area2D" parent="personagem"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -57.5241 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="shape" type="CollisionShape2D" parent="personagem/cabeca"]
+
+transform/pos = Vector2( 0, -57.5241 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 70, 70 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 2
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -327627, 24, -327626, 24, -327625, 24, -327624, 24, -327623, 24, -327622, 24, -327621, 24, -262091, 24, -262090, 24, -262089, 24, -262088, 24, -262087, 24, -262086, 24, -262085, 24, -196555, 24, -196554, 24, -196553, 24, -196552, 24, -196551, 24, -196550, 24, -196549, 24, -131019, 24, -131018, 24, -131017, 24, -131016, 24, -131015, 24, -131014, 24, -131013, 24, -65483, 24, -65482, 24, -65481, 24, -65480, 24, -65479, 24, -65478, 24, -65477, 24, 65535, 3, 53, 24, 54, 24, 55, 24, 56, 24, 57, 24, 58, 24, 59, 24, 131071, 3, 65589, 24, 65590, 24, 65591, 24, 65592, 24, 65593, 24, 65594, 24, 65595, 24, 196607, 3, 131125, 24, 131126, 24, 131127, 24, 131128, 24, 131129, 24, 131130, 24, 131131, 24, 262143, 3, 196661, 24, 196662, 24, 196663, 24, 196664, 24, 196665, 24, 196666, 24, 196667, 24, 327679, 3, 262197, 24, 262198, 24, 262199, 24, 262200, 24, 262201, 24, 262202, 24, 262203, 24, 393215, 3, 327733, 24, 327734, 24, 327735, 24, 327736, 24, 327737, 24, 327738, 24, 327739, 24, 458751, 3, 393269, 24, 393270, 24, 393271, 24, 393272, 24, 393273, 24, 393274, 24, 393275, 24, 524287, 3, 458752, 24, 458753, 24, 458754, 24, 458755, 24, 458756, 24, 458757, 24, 458758, 24, 458759, 23, 458792, 8, 458805, 24, 458806, 24, 458807, 24, 458808, 24, 458809, 24, 458810, 24, 458811, 24, 524321, 22, 524322, 24, 524323, 24, 524324, 24, 524325, 24, 524326, 24, 524327, 24, 524328, 24, 524329, 23, 524341, 24, 524342, 24, 524343, 24, 524344, 24, 524345, 24, 524346, 24, 524347, 24, 589877, 24, 589878, 24, 589879, 24, 589880, 24, 589881, 24, 589882, 24, 589883, 24, 655402, 24, 655403, 24, 655404, 24, 655413, 24, 655414, 24, 655415, 24, 655416, 24, 655417, 24, 655418, 24, 655419, 24, 720948, 24, 720949, 24, 720950, 24, 720951, 24, 720952, 24, 720953, 24, 720954, 24, 720955, 24, 786477, 24, 786478, 24, 786479, 24, 786484, 24, 852020, 24, 917556, 24, 983092, 24, 1048628, 24, 1114164, 24, 1179700, 24, 1245236, 24, 1310772, 24, 1376308, 24, 1441844, 24, 1441845, 24, 1441846, 24, 1441847, 24, 1441848, 24, 1441849, 24, 1441850, 24, 1441851, 24, 1441852, 24, 1703988, 24, 1703989, 24, 1703990, 24, 1769527, 24, 1769528, 24, 1769529, 24, 1900611, 24, 1900615, 24, 1966146, 24, 1966147, 24, 1966151, 24, 1966152, 24, 2031674, 22, 2031675, 24, 2031676, 24, 2031677, 24, 2031678, 24, 2031679, 24, 2031680, 24, 2031681, 24, 2031682, 24, 2031683, 24, 2031687, 24, 2031688, 24, 2031689, 24, 2031690, 24, 2031691, 24, 2031692, 24, 2031693, 24, 2031694, 24, 2031711, 22, 2031712, 24, 2031713, 24, 2031714, 24, 2031715, 24, 2031716, 24, 2031717, 24, 2031718, 24, 2031719, 24, 2031720, 24, 2097219, 24, 2097220, 24, 2097221, 24, 2097222, 24, 2097223, 24, 2162755, 24, 2162756, 24, 2162757, 24, 2162758, 24, 2162759, 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="parallax" type="ParallaxBackground" parent="."]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="layer" type="ParallaxLayer" parent="parallax"]
+
+motion/scale = Vector2( 0.5, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 126.081, 106.26 )
+transform/scale = Vector2( 1.19614, 1.27289 )
+texture = ExtResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 4095, 105 )
+transform/scale = Vector2( 1.19614, 1.27289 )
+texture = ExtResource( 5 )
+
+[node name="Sprite9" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 4095, 455 )
+transform/scale = Vector2( 1.19614, 1.27289 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 1125.47, 182.879 )
+transform/scale = Vector2( 1.41085, 1.48054 )
+texture = ExtResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 2345, 105 )
+transform/scale = Vector2( 1.41085, 1.48054 )
+texture = ExtResource( 6 )
+
+[node name="Sprite10" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 3745, 385 )
+transform/scale = Vector2( 1.41085, 1.48054 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 1505, 455 )
+transform/scale = Vector2( 1.41085, 1.48054 )
+texture = ExtResource( 6 )
+
+[node name="Sprite1" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 435.129, 301.928 )
+transform/scale = Vector2( 1.03189, 0.97678 )
+texture = ExtResource( 5 )
+
+[node name="Sprite5" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 3325, 105 )
+transform/scale = Vector2( 1.03189, 0.97678 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 824.068, 18.1974 )
+transform/scale = Vector2( 0.801947, 0.799115 )
+texture = ExtResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="parallax/layer"]
+
+transform/pos = Vector2( 2765, 315 )
+transform/scale = Vector2( 0.801947, 0.799115 )
+texture = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="controles" type="Node2D" parent="CanvasLayer"]
+
+editor/display_folded = true
+
+[node name="touchLeft" type="TouchScreenButton" parent="CanvasLayer/controles"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 35, 525 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 9 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="touchRight" type="TouchScreenButton" parent="CanvasLayer/controles"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 245, 525 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 11 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="touchUp" type="TouchScreenButton" parent="CanvasLayer/controles"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 1085, 525 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 13 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 100.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="moeda" type="Sprite" parent="CanvasLayer/Panel"]
+
+transform/pos = Vector2( 47.7259, 51.4271 )
+transform/scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 14 )
+hframes = 61
+
+[node name="moedas" type="Label" parent="CanvasLayer/Panel"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 111.0
+margin/top = 7.0
+margin/right = 254.0
+margin/bottom = 180.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 0.648438, 0.511717, 0.276093, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="heart3" type="TextureFrame" parent="CanvasLayer/Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1201.0
+margin/top = 26.0
+margin/right = 1254.0
+margin/bottom = 71.0
+texture = ExtResource( 16 )
+stretch_mode = 0
+
+[node name="heart2" type="TextureFrame" parent="CanvasLayer/Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1131.0
+margin/top = 26.0
+margin/right = 1184.0
+margin/bottom = 71.0
+texture = ExtResource( 16 )
+stretch_mode = 0
+
+[node name="heart1" type="TextureFrame" parent="CanvasLayer/Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1059.0
+margin/top = 26.0
+margin/right = 1112.0
+margin/bottom = 71.0
+texture = ExtResource( 16 )
+stretch_mode = 0
+
+[node name="time" type="Label" parent="CanvasLayer/Panel"]
+
+anchor/left = 3
+anchor/right = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 101.0
+margin/top = 0.0
+margin/right = -79.0
+margin/bottom = 107.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 0.647059, 0.509804, 0.27451, 1 )
+text = "30"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="game_time" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 601.0
+one_shot = true
+autostart = true
+
+[node name="backGround" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="backGround"]
+
+transform/pos = Vector2( 985.592, 378.029 )
+transform/scale = Vector2( 3.62779, 3.78713 )
+texture = ExtResource( 17 )
+
+[node name="TileMap 2" type="TileMap" parent="."]
+
+z/z = -1
+mode = 0
+tile_set = ExtResource( 18 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -393216, 1, -393215, 1, 327680, 1, 327681, 1, 393216, 1, 393217, 1, 458752, 1, 458753, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="plataformas" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="platMovel" parent="plataformas" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 665, 525 )
+curve = SubResource( 7 )
+
+[node name="platMovel3" parent="plataformas" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5495, 2205 )
+curve = SubResource( 8 )
+
+[node name="platMovel 2" parent="plataformas" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 3325, 1855 )
+curve = SubResource( 9 )
+
+[node name="inimigos" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="codObj" parent="inimigos" instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 595, 665 )
+curve = SubResource( 10 )
+
+[node name="codObj3" parent="inimigos" instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 748.747, 1024.43 )
+curve = SubResource( 10 )
+
+[node name="codObj 2" parent="inimigos" instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 4099.54, 2164.54 )
+curve = SubResource( 11 )
+
+[node name="codObj4" parent="inimigos" instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 5010.65, 2023.67 )
+curve = SubResource( 12 )
+
+[node name="codObj5" parent="inimigos" instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 4862.81, 2132.46 )
+curve = SubResource( 13 )
+
+[node name="espinhos" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="espinho" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinhos3" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 2555, 735 )
+
+[node name="espinho" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos3" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinhos4" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 3395, 735 )
+
+[node name="espinho" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos4" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinhos5" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 4515, 735 )
+
+[node name="espinho1" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos5" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinhos6" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 5355, 735 )
+
+[node name="espinho" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos6" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinhos7" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 4585, 1125.18 )
+transform/rot = -90.0
+
+[node name="espinho" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos7" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinhos8" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 2094.17, 73.0733 )
+transform/rot = -90.0
+
+[node name="espinho" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1223.16, 1575 )
+
+[node name="espinho11" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1291.32, 1575 )
+
+[node name="espinho12" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1364.03, 1575 )
+
+[node name="espinho13" parent="espinhos8" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1434.47, 1575 )
+
+[node name="espinhos1" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 837.157, 2.93153 )
+
+[node name="espinho" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinho12" parent="espinhos1" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinhos2" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1680.85, 3.93774 )
+
+[node name="espinho" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 525, 1575 )
+
+[node name="espinho1" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 595, 1575 )
+
+[node name="espinho2" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 665, 1575 )
+
+[node name="espinho3" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 735, 1575 )
+
+[node name="espinho4" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 805, 1575 )
+
+[node name="espinho5" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 875, 1575 )
+
+[node name="espinho6" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 945, 1575 )
+
+[node name="espinho7" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1015, 1575 )
+
+[node name="espinho8" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1085, 1575 )
+
+[node name="espinho9" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1155, 1575 )
+
+[node name="espinho10" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1225, 1575 )
+
+[node name="espinho11" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="espinho12" parent="espinhos2" instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 1295, 1575 )
+
+[node name="conversor" type="Sprite" parent="."]
+
+transform/pos = Vector2( 4025, 1184.54 )
+z/z = -1
+texture = ExtResource( 22 )
+
+[node name="inimigosFila" type="Node2D" parent="."]
+
+editor/display_folded = true
+z/z = -3
+
+[node name="assembly" parent="inimigosFila" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 3936.96, 701.057 )
+curve = SubResource( 14 )
+
+[node name="codObj" parent="inimigosFila" instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 4165, 1225 )
+curve = SubResource( 15 )
+
+[node name="codObj1" parent="inimigosFila" instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 3811.8, 1242.56 )
+curve = SubResource( 15 )
+
+[node name="cano" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 4865, 2135 )
+transform/scale = Vector2( 0.325, 0.325 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cano"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 3.66797, -289.662 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cano/StaticBody2D"]
+
+transform/pos = Vector2( 3.66797, -289.662 )
+shape = SubResource( 16 )
+trigger = false
+_update_shape_index = 0
+
+[node name="moedas" type="Node2D" parent="."]
+
+[node name="moeda" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1085, 665 )
+
+[node name="moeda1" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1225, 735 )
+
+[node name="moeda2" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1505, 735 )
+
+[node name="moeda3" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1715, 665 )
+
+[node name="moeda4" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 3115, 665 )
+
+[node name="moeda5" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 3325, 805 )
+
+[node name="moeda6" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 3535, 805 )
+
+[node name="moeda10" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 4725, 1995 )
+
+[node name="moeda11" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 4655, 2065 )
+
+[node name="moeda12" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 5005, 1995 )
+
+[node name="moeda13" parent="moedas" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 5075, 2065 )
+
+[node name="placa" type="Sprite" parent="."]
+
+transform/pos = Vector2( 5412.5, 2062.81 )
+transform/scale = Vector2( 0.38125, 0.40625 )
+texture = ExtResource( 27 )
+
+[connection signal="body_enter" from="fim" to="personagem" method="_on_fim_body_enter"]
+
+[connection signal="timeout" from="spawn_time" to="." method="_on_spawn_time_timeout"]
+
+[connection signal="fim" from="personagem" to="." method="_on_personagem_fim"]
+
+[connection signal="moeda" from="personagem" to="." method="_on_personagem_moeda"]
+
+[connection signal="morreu" from="personagem" to="." method="_on_personagem_morreu"]
+
+[connection signal="body_enter" from="personagem/pes" to="personagem" method="_on_pes_body_enter"]
+
+[connection signal="body_enter" from="personagem/corpo" to="personagem" method="_on_corpo_body_enter"]
+
+[connection signal="body_enter" from="personagem/cabeca" to="personagem" method="_on_cabeca_body_enter"]
+
+[connection signal="pressed" from="CanvasLayer/controles/touchLeft" to="personagem" method="_on_touchLeft_pressed"]
+
+[connection signal="released" from="CanvasLayer/controles/touchLeft" to="personagem" method="_on_touchLeft_released"]
+
+[connection signal="pressed" from="CanvasLayer/controles/touchRight" to="personagem" method="_on_touchRight_pressed"]
+
+[connection signal="released" from="CanvasLayer/controles/touchRight" to="personagem" method="_on_touchRight_released"]
+
+[connection signal="pressed" from="CanvasLayer/controles/touchUp" to="personagem" method="_on_touchUp_pressed"]
+
+[connection signal="released" from="CanvasLayer/controles/touchUp" to="personagem" method="_on_touchUp_released"]
+
+[connection signal="timeout" from="game_time" to="personagem" method="_on_game_time_timeout"]
+
+

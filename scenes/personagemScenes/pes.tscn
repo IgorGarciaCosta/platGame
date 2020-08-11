@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.3976, 0.325195 )
+
+[node name="pes1" type="Area2D"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 62.4263 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 1024
+collision/mask = 8192
+
+[node name="shape" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 62.4263 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+

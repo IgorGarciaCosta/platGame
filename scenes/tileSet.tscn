@@ -1,0 +1,685 @@
+[gd_scene load_steps=39 format=1]
+
+[ext_resource path="res://assets/Tiles/grassMid.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tiles/cyberLeft.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tiles/lvl5L.png" type="Texture" id=3]
+[ext_resource path="res://assets/Tiles/lvl5R.png" type="Texture" id=4]
+[ext_resource path="res://assets/Tiles/lvl5Mid.png" type="Texture" id=5]
+[ext_resource path="res://assets/Tiles/cyberLeftPurple.png" type="Texture" id=6]
+[ext_resource path="res://assets/Tiles/cyberRight.png" type="Texture" id=7]
+[ext_resource path="res://assets/Tiles/cyberRightPurple.png" type="Texture" id=8]
+[ext_resource path="res://assets/Tiles/cyberMid.png" type="Texture" id=9]
+[ext_resource path="res://assets/Tiles/cyberMidPurple.png" type="Texture" id=10]
+[ext_resource path="res://assets/Tiles/cyberHillLeft.png" type="Texture" id=11]
+[ext_resource path="res://assets/Tiles/grassLeft.png" type="Texture" id=12]
+[ext_resource path="res://assets/Tiles/grassRight.png" type="Texture" id=13]
+[ext_resource path="res://assets/Tiles/grassCenter.png" type="Texture" id=14]
+[ext_resource path="res://assets/Tiles/liquidWaterTop_mid.png" type="Texture" id=15]
+[ext_resource path="res://assets/Tiles/liquidWater.png" type="Texture" id=16]
+[ext_resource path="res://assets/Tiles/signExit.png" type="Texture" id=17]
+[ext_resource path="res://assets/Tiles/signRight.png" type="Texture" id=18]
+[ext_resource path="res://assets/Tiles/sign.png" type="Texture" id=19]
+[ext_resource path="res://assets/Tiles/fence.png" type="Texture" id=20]
+[ext_resource path="res://assets/Tiles/fenceBroken.png" type="Texture" id=21]
+[ext_resource path="res://assets/Tiles/bridgeLogs.png" type="Texture" id=22]
+[ext_resource path="res://assets/Tiles/grassMidNight.png" type="Texture" id=23]
+[ext_resource path="res://assets/Tiles/grassCenterNight.png" type="Texture" id=24]
+[ext_resource path="res://assets/Tiles/rock.png" type="Texture" id=25]
+[ext_resource path="res://assets/Tiles/castleHillLeft.png" type="Texture" id=26]
+[ext_resource path="res://assets/Tiles/castleHillLeft2.png" type="Texture" id=27]
+[ext_resource path="res://assets/Tiles/liquidLava.png" type="Texture" id=28]
+[ext_resource path="res://assets/Tiles/esteiraCenter.png" type="Texture" id=29]
+[ext_resource path="res://assets/Tiles/esteiraRight.png" type="Texture" id=30]
+[ext_resource path="res://assets/Tiles/esteiraLeft.png" type="Texture" id=31]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.3711, 35.1353 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.111, 9.82729 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34.7822, 34.4311 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.1707, 34.339 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.9038, 12.064 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.3187, 34.7361 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.62244, 50.1427 )
+
+[node name="tileSet" type="Node2D"]
+
+[node name="grassMid" type="Sprite" parent="."]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassMid"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassMid/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 140.295 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberLeft"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberLeft/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="lvl5Left" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 219.197 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lvl5Left"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5Left/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="lvl5Right" type="Sprite" parent="."]
+
+transform/pos = Vector2( 74.8206, 215.116 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lvl5Right"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5Right/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="lvl5Mid" type="Sprite" parent="."]
+
+transform/pos = Vector2( 141.479, 212.395 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lvl5Mid"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5Mid/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberLeft1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 252, 140.295 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberLeft1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberLeft1/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberRight" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 75.1582, 140.295 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberRight"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberRight/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberRight1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 322.158, 140.295 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberRight1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberRight1/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberMid" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 148.646, 140.295 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberMid"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberMid/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ciberMid1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 397.646, 140.295 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ciberMid1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ciberMid1/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="cyberHillLeft" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 470.646, 140.295 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cyberHillLeft"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cyberHillLeft/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="grassLeft" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 70, 0 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassLeft"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassLeft/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="grassRight" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 140, 0 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassRight"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassRight/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="grassCenter" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 210, 0 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCenter"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassCenter/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="waterTop" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 70 )
+texture = ExtResource( 15 )
+
+[node name="waterCenter" type="Sprite" parent="."]
+
+transform/pos = Vector2( 70, 70 )
+texture = ExtResource( 16 )
+
+[node name="exit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 140, 70 )
+texture = ExtResource( 17 )
+
+[node name="sign" type="Sprite" parent="."]
+
+transform/pos = Vector2( 210, 70 )
+texture = ExtResource( 18 )
+
+[node name="sign 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 280, 0 )
+texture = ExtResource( 19 )
+
+[node name="fence" type="Sprite" parent="."]
+
+transform/pos = Vector2( 290, 70 )
+texture = ExtResource( 20 )
+
+[node name="fenceBroken" type="Sprite" parent="."]
+
+transform/pos = Vector2( 360, 70 )
+texture = ExtResource( 21 )
+
+[node name="bridge" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 350, 0 )
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bridge"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 21.4702 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bridge/StaticBody2D"]
+
+transform/pos = Vector2( 0, 21.4702 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="grassMidNight" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 430, 0 )
+texture = ExtResource( 23 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassMidNight"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassMidNight/StaticBody2D"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="grassCenterNight" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 500.831, 0 )
+texture = ExtResource( 24 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCenterNight"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grassCenterNight/StaticBody2D"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bridgeInclinado" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 416.695, 56.4405 )
+transform/rot = 45.0
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bridgeInclinado"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -2.71851, 23.0863 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bridgeInclinado/StaticBody2D"]
+
+transform/pos = Vector2( -2.71851, 23.0863 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bridgeInclinado1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 516.872, 56.4405 )
+transform/rot = -45.0
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bridgeInclinado1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -2.71851, 23.0863 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bridgeInclinado1/StaticBody2D"]
+
+transform/pos = Vector2( -2.71851, 23.0863 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="rock" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 571.282, 0 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rock"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock/StaticBody2D"]
+
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="inclinado" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 638.015, 0 )
+texture = ExtResource( 26 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="inclinado"]
+
+transform/pos = Vector2( 4.08105, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 0.712071, -0.702108, 0.702108, 0.712071, 0.663452, 0.663391 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inclinado/StaticBody2D"]
+
+transform/pos = Vector2( 0.663452, 0.663391 )
+transform/rot = 44.5964
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="inclinado1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 707.015, 0 )
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="inclinado1"]
+
+editor/display_folded = true
+transform/pos = Vector2( -0.562927, 0 )
+transform/rot = -88.7969
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 0.712071, -0.702108, 0.702108, 0.712071, 0.663452, 0.663391 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inclinado1/StaticBody2D"]
+
+transform/pos = Vector2( 0.663452, 0.663391 )
+transform/rot = 44.5964
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="lavaMid" type="Sprite" parent="."]
+
+transform/pos = Vector2( 69.6591, -69.6591 )
+texture = ExtResource( 28 )
+
+[node name="esteiraMid" type="Sprite" parent="."]
+
+transform/pos = Vector2( 545.51, 138.758 )
+texture = ExtResource( 29 )
+
+[node name="esteiraRight" type="Sprite" parent="."]
+
+transform/pos = Vector2( 617.61, 138.758 )
+texture = ExtResource( 30 )
+
+[node name="esteiraLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 691.07, 138.758 )
+texture = ExtResource( 31 )
+
+

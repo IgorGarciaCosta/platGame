@@ -1,0 +1,11 @@
+[gd_scene format=1]
+
+[node name="rayD1" type="RayCast2D"]
+
+transform/pos = Vector2( 25.27, 56.8575 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+layer_mask = 1
+type_mask = 15
+
+

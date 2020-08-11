@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://assets/Botoes/cima0.png" type="Texture" id=1]
+[ext_resource path="res://assets/Botoes/cima1.png" type="Texture" id=2]
+
+[node name="touchUp" type="TouchScreenButton"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 1085, 525 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+

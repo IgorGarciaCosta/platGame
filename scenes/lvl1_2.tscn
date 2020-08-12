@@ -170,7 +170,7 @@ zoom = Vector2( 1, 1 )
 limit/left = 0
 limit/top = -10000000
 limit/right = 10000000
-limit/bottom = 800
+limit/bottom = 80000
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = false
@@ -195,6 +195,8 @@ collision/margin = 0.01
 script/script = ExtResource( 2 )
 
 [node name="sprite" parent="personagem" instance=ExtResource( 3 )]
+
+frame = 0
 
 [node name="shape" type="CollisionShape2D" parent="personagem"]
 
@@ -494,7 +496,6 @@ transform/pos = Vector2( 3488.04, 1059.3 )
 
 [node name="inimigos" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 580.218, 485.111 )
 
 [node name="espinho" parent="inimigos" instance=ExtResource( 9 )]
@@ -643,7 +644,6 @@ curve = SubResource( 8 )
 [node name="C_alado3" parent="inimigos" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 5544.78, 2349.89 )
-transform/rot = -90.6444
 curve = SubResource( 9 )
 
 [node name="python" parent="inimigos" instance=ExtResource( 11 )]

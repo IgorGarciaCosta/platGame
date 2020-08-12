@@ -48,7 +48,7 @@ func reviver():
 func _on_personagem_fim():#pra o game saber quando chegarmos ao fim
 	change_camera()
 	get_node("spawn_time").set_wait_time(3)
-	transition.fade_to("res://scenes/inst1.tscn")#vai pro level 2 ao chegar no final
+	transition.fade_to("res://scenes/inst1.tscn")
 	#get_node("spawn_time").start()
 
 

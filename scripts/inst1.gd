@@ -62,4 +62,4 @@ func _on_personagem_moeda():
 
 func _on_instrutor_body_enter( body ):
 	print("dentro")
-	transition.fade_to("res://scenes/cutScenes/cut2.tscn")
+	transition.fade_to("res://scenes/cutScenes/inst1Cut1.tscn")

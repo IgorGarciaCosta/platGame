@@ -144,7 +144,7 @@ script/script = ExtResource( 2 )
 
 [node name="sprite" parent="personagem" instance=ExtResource( 3 )]
 
-frame = 3
+frame = 6
 
 [node name="shape" type="CollisionShape2D" parent="personagem"]
 
@@ -414,7 +414,6 @@ transform/pos = Vector2( 1108.04, -410.702 )
 
 [node name="inimigos" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 580.218, 485.111 )
 
 [node name="lesma" parent="inimigos" instance=ExtResource( 9 )]

@@ -19,11 +19,12 @@ func _fixed_process(delta):
 		get_parent().set_unit_offset(new_offset)
 		
 func esmagar():
+	
 	if not vivo: return
 	vivo = false
 	get_node("anim").stop()
 	get_node("sprite").set_texture(load("res://assets/inimigo/slimeDead.png"))
 	get_node("sprite").set_offset(Vector2(0, 8))#abaixa a posição do inimigo por causa da dif de tam dos sprites
 	get_node("shape").queue_free()
-	set_fixed_process(false)#faz o inimigo parar de andar
-			
+	get_node("sprite").queue_free()#apaga o sprite do bloco
+	set_fixed_process(false)#faz o inimigo parar de anda

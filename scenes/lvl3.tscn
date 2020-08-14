@@ -1,6 +1,6 @@
 [gd_scene load_steps=44 format=1]
 
-[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://scripts/lvl3.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
 [ext_resource path="res://scenes/personagemScenes/sprite.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/tileSets/tileset.tres" type="TileSet" id=4]
@@ -605,7 +605,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -393216, 1, -393215, 1, 327680, 1, 327681, 1, 393216, 1, 393217, 1, 458752, 1, 458753, 1 )
+tile_data = IntArray( 327680, 1, 327681, 1, 393216, 1, 393217, 1, 458752, 1, 458753, 1 )
 __meta__ = {
 "_edit_lock_": true
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=1]
+[gd_scene load_steps=47 format=1]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -22,6 +22,12 @@
 [ext_resource path="res://scenes/plataformasLvl5.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/UlaAnim.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/smoke.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/and.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/nand.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/or.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/nor.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/not.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/espinhoNeon.tscn" type="PackedScene" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -80,6 +86,69 @@ _data = {
 bake_interval = 5.0
 _data = {
 "points": Vector2Array( 0, 0, 0, 0, -35, -35, 0, 0, 0, 0, -35, 735 )
+}
+
+[sub_resource type="Curve2D" id=10]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -5.64978, -19.9343, -109.323, 163.985, 504.569, -983.909, 221.406, 219.736, 0, 0, 395.245, 4.20474, 889.96, -705.307, 0, 0, -201.827, 899.814, 1230.54, -204.943, 0, 0, -382.631, -946.066, 700.746, 202.917, 0, 0, 0, 0, 175.154, -621.212, -71.4806, -555.026, 0, 0, 116.288, -162.895 )
+}
+
+[sub_resource type="Curve2D" id=11]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -14.6958, -17.5552, 0, 0, 395.245, 33.6379, 342.707, 154.839, 0, 0, 239.67, -361.608, 935.575, -80.6263, 0, 0, -218.646, 67.2758, 149.289, -374.958, 0, 0, 16.819, -365.812, -187.09, 7.67322, 0, 0, -100.914, -42.0474, -443.579, -374.958, 0, 0, 0, 0, -855.644, -194.154 )
+}
+
+[sub_resource type="Curve2D" id=12]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 12.9633, -22.9673, 0, 0, 0, 0, 650.486, -7.78815 )
+}
+
+[sub_resource type="Curve2D" id=18]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -2.21582, -3.99353, 0, 0, 0, 0, 1189.23, 17.8835 )
+}
+
+[sub_resource type="Curve2D" id=13]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -6.89575, -1.26801, 0, 0, 0, 0, 855.455, -17.9484 )
+}
+
+[sub_resource type="Curve2D" id=16]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -14.4857, -27.8314, 0, 0, 0, 0, 538.604, -29.5154 )
+}
+
+[sub_resource type="Curve2D" id=17]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 8.28271, -8.85754, 0, 0, 0, 0, 1012.13, -32.4071 )
+}
+
+[sub_resource type="Curve2D" id=14]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -1.54492, -9.88525, 0, 0, 0, 0, 485.344, -18.7489 )
+}
+
+[sub_resource type="Curve2D" id=15]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -16.7238, -2.29565, 0, 0, 0, 0, 1147.64, -21.9786 )
 }
 
 [node name="game" type="Node"]
@@ -150,8 +219,6 @@ collision/margin = 0.01
 script/script = ExtResource( 2 )
 
 [node name="sprite" parent="personagem" instance=ExtResource( 3 )]
-
-frame = 0
 
 [node name="shape" type="CollisionShape2D" parent="personagem"]
 
@@ -684,6 +751,149 @@ z/z = -1
 
 transform/pos = Vector2( 2424.32, 1487.01 )
 z/z = -1
+
+[node name="inimigos" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 51.3718, 0 )
+
+[node name="and" parent="inimigos" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 365.984, 1180.94 )
+curve = SubResource( 10 )
+
+[node name="nand" parent="inimigos" instance=ExtResource( 24 )]
+
+transform/pos = Vector2( 1792.65, 1697.27 )
+curve = SubResource( 11 )
+
+[node name="or" parent="inimigos" instance=ExtResource( 25 )]
+
+transform/pos = Vector2( 1768.44, 1958.31 )
+curve = SubResource( 12 )
+
+[node name="or1" parent="inimigos" instance=ExtResource( 25 )]
+
+transform/pos = Vector2( 2015.11, 2743.83 )
+curve = SubResource( 18 )
+
+[node name="nor" parent="inimigos" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1924.92, 2080.81 )
+curve = SubResource( 13 )
+
+[node name="nor1" parent="inimigos" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1822.46, 2521 )
+curve = SubResource( 16 )
+
+[node name="nor2" parent="inimigos" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 1917.33, 2631.05 )
+curve = SubResource( 17 )
+
+[node name="not" parent="inimigos" instance=ExtResource( 27 )]
+
+transform/pos = Vector2( 1968.9, 2226.04 )
+curve = SubResource( 14 )
+
+[node name="not1" parent="inimigos" instance=ExtResource( 27 )]
+
+transform/pos = Vector2( 2033.41, 2355.06 )
+curve = SubResource( 15 )
+
+[node name="espinhos" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="espinho" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 36.4066, 1497.84 )
+
+[node name="espinho1" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2975 )
+transform/rot = 90.0
+
+[node name="espinho2" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2905 )
+transform/rot = 90.0
+
+[node name="espinho3" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2835 )
+transform/rot = 90.0
+
+[node name="espinho4" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2765 )
+transform/rot = 90.0
+
+[node name="espinho5" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2695 )
+transform/rot = 90.0
+
+[node name="espinho6" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2625 )
+transform/rot = 90.0
+
+[node name="espinho7" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2555 )
+transform/rot = 90.0
+
+[node name="espinho8" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2485 )
+transform/rot = 90.0
+
+[node name="espinho9" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2415 )
+transform/rot = 90.0
+
+[node name="espinho10" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2345 )
+transform/rot = 90.0
+
+[node name="espinho11" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2275 )
+transform/rot = 90.0
+
+[node name="espinho12" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2135 )
+transform/rot = 90.0
+
+[node name="espinho13" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2205 )
+transform/rot = 90.0
+
+[node name="espinho14" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 2065 )
+transform/rot = 90.0
+
+[node name="espinho15" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 1995 )
+transform/rot = 90.0
+
+[node name="espinho16" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 1925 )
+transform/rot = 90.0
+
+[node name="espinho17" parent="espinhos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1645, 1855 )
+transform/rot = 90.0
 
 [connection signal="body_enter" from="fim" to="personagem" method="_on_fim_body_enter"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=1]
+[gd_scene load_steps=46 format=1]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -24,6 +24,11 @@
 [ext_resource path="res://scenes/amassadorLvl5.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/entupimento.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/espinhoNeon.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/and.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/nand.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/or.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/nor.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/not.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -98,6 +103,41 @@ _data = {
 "points": Vector2Array( 0, 0, 0, 0, 36.5527, -361.987, 0, 0, 0, 0, 36.5527, -35.5242 )
 }
 
+[sub_resource type="Curve2D" id=12]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -11.3712, -9.65222, 0, 0, 0, 0, 449.869, -18.9702, 0, 0, 0, 0, 463.846, 344.431, 0, 0, 0, 0, -16.0303, 344.431, 0, 0, 0, 0, -11.3712, -9.65222 )
+}
+
+[sub_resource type="Curve2D" id=13]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 1.95886, -18.9701, 0, 0, 0, 0, 402.632, -18.9701, 0, 0, 0, 0, 402.632, 246.592, 0, 0, 0, 0, 1.95886, 246.592, 0, 0, 0, 0, 1.95886, -18.9701 )
+}
+
+[sub_resource type="Curve2D" id=14]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -17.166, -8.18347, 0, 0, 0, 0, 1452.88, 3.25659 )
+}
+
+[sub_resource type="Curve2D" id=15]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 23.5865, -325.09, 0, 0, 0, 0, 23.5865, 281.232 )
+}
+
+[sub_resource type="Curve2D" id=16]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -15.8913, -10.463, 0, 0, 0, 0, 257.417, -224.905, 0, 0, 0, 0, 345.716, 199.774, 0, 0, 0, 0, -24.3008, -208.086, 0, 0, 0, 0, 652.662, -128.196, 0, 0, 0, 0, -15.8913, -10.463 )
+}
+
 [node name="game" type="Node"]
 
 script/script = ExtResource( 1 )
@@ -167,7 +207,7 @@ script/script = ExtResource( 2 )
 
 [node name="sprite" parent="personagem" instance=ExtResource( 3 )]
 
-frame = 3
+frame = 2
 
 [node name="shape" type="CollisionShape2D" parent="personagem"]
 
@@ -1379,6 +1419,33 @@ transform/rot = 0.0512025
 
 transform/pos = Vector2( 875, 1435 )
 transform/rot = 0.0512025
+
+[node name="inimigos" type="Node2D" parent="."]
+
+[node name="and" parent="inimigos" instance=ExtResource( 25 )]
+
+transform/pos = Vector2( 1686.55, 559.079 )
+curve = SubResource( 12 )
+
+[node name="nand" parent="inimigos" instance=ExtResource( 26 )]
+
+transform/pos = Vector2( 2772.1, 894.526 )
+curve = SubResource( 13 )
+
+[node name="or" parent="inimigos" instance=ExtResource( 27 )]
+
+transform/pos = Vector2( 3393.43, 1110.79 )
+curve = SubResource( 14 )
+
+[node name="nor" parent="inimigos" instance=ExtResource( 28 )]
+
+transform/pos = Vector2( 1267.25, 512.489 )
+curve = SubResource( 15 )
+
+[node name="not" parent="inimigos" instance=ExtResource( 29 )]
+
+transform/pos = Vector2( 535.131, 399.014 )
+curve = SubResource( 16 )
 
 [connection signal="body_enter" from="fim" to="personagem" method="_on_fim_body_enter"]
 

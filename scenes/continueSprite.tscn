@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/cutscenes/continue.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 195.002, 77.9996 )
+transform/scale = Vector2( 0.736582, 0.736582 )
+texture = ExtResource( 1 )
+
+

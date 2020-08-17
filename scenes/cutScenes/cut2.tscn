@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scripts/cut2.gd" type="Script" id=1]
-[ext_resource path="res://fonts/font100.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://scenes/continueSprite.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/cutscenes/cut2.png" type="Texture" id=3]
 
 [node name="Node" type="Node"]
@@ -25,7 +25,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
+margin/left = 263.0
 margin/top = -5.0
 margin/right = 628.0
 margin/bottom = 90.0
@@ -35,22 +35,7 @@ shortcut = null
 params/resize_mode = 0
 params/stretch_mode = 0
 
-[node name="Label" type="Label" parent="control/go"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 629.0
-margin/bottom = 107.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.0273438, 0.0273438, 0.0273438, 1 )
-text = "CONTINUE"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+[node name="Sprite" parent="control/go" instance=ExtResource( 2 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
